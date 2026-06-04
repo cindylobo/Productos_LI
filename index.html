@@ -18,9 +18,19 @@
 
   .bg {
     position:absolute; inset:0;
-    background-size:cover; background-position:center;
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
     transform:scale(1.07);
     filter:brightness(0.72) saturate(1.2);
+  }
+  @media (max-width:600px) {
+    .bg {
+      background-size:contain;
+      background-position:center top;
+      background-color:#000;
+      filter:brightness(0.6) saturate(1.1);
+    }
   }
   .slide.active .bg { animation:kenBurns 9s ease-out forwards; }
   @keyframes kenBurns { from{transform:scale(1.07)} to{transform:scale(1.00)} }
@@ -44,6 +54,9 @@
 
   /* COPY */
   .copy { position:absolute; bottom:11%; left:7%; max-width:70%; }
+  @media (max-width:600px) {
+    .copy { bottom:8%; left:5%; max-width:88%; }
+  }
 
   .slide-label {
     font-family:'Bebas Neue',cursive;
@@ -55,7 +68,7 @@
 
   .drink-name {
     font-family:'Playfair Display',serif;
-    font-size:clamp(46px,7vw,108px);
+    font-size:clamp(36px,7vw,108px);
     font-weight:900; line-height:0.9;
     color:#fff; text-shadow:0 4px 50px rgba(0,0,0,0.7);
     opacity:0; transform:translateY(30px);
