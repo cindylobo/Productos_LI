@@ -18,22 +18,15 @@
 
   .bg {
     position:absolute; inset:0;
-    background-size:cover;
+    background-size:contain;
     background-position:center center;
     background-repeat:no-repeat;
-    transform:scale(1.07);
-    filter:brightness(0.72) saturate(1.2);
-  }
-  @media (max-width:600px) {
-    .bg {
-      background-size:contain;
-      background-position:center top;
-      background-color:#000;
-      filter:brightness(0.6) saturate(1.1);
-    }
+    background-color:#0a0a0a;
+    transform:scale(1.0);
+    filter:brightness(0.82) saturate(1.2);
   }
   .slide.active .bg { animation:kenBurns 9s ease-out forwards; }
-  @keyframes kenBurns { from{transform:scale(1.07)} to{transform:scale(1.00)} }
+  @keyframes kenBurns { from{transform:scale(1.03)} to{transform:scale(1.00)} }
 
   .grad {
     position:absolute; inset:0;
